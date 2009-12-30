@@ -1,5 +1,3 @@
-# $Id: news.pm,v 2.102 2008/05/23 21:30:10 abigail Exp $
-
 package Regexp::Common::URI::news;
 
 use strict;
@@ -10,9 +8,6 @@ use Regexp::Common::URI          qw /register_uri/;
 use Regexp::Common::URI::RFC1738 qw /$grouppart $group $article
                                      $host $port $digits/;
 
-use vars qw /$VERSION/;
-
-($VERSION) = q $Revision: 2.102 $ =~ /[\d.]+/g;
 
 my $news_scheme = 'news';
 my $news_uri    = "(?k:(?k:$news_scheme):(?k:$grouppart))";
@@ -134,19 +129,6 @@ Locators (URL)>. December 1994.
 
 =back
 
-=head1 HISTORY
-
- $Log: news.pm,v $
- Revision 2.102  2008/05/23 21:30:10  abigail
- Changed email address
-
- Revision 2.101  2008/05/23 21:28:02  abigail
- Changed license
-
- Revision 2.100  2003/02/11 14:11:29  abigail
- NNTP and news URIs
-
-
 =head1 SEE ALSO
 
 L<Regexp::Common::URI> for other supported URIs.
@@ -165,7 +147,7 @@ Bound to be plenty.
 
 =head1 COPYRIGHT
 
-This software is Copyright (c) 2001 - 2008, Damian Conway and Abigail.
+This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 
 This module is free software, and maybe used under any of the following
 licenses:

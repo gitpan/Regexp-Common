@@ -6,10 +6,6 @@ local $^W = 1;
 use Regexp::Common qw /pattern clean no_defaults/;
 use Regexp::Common::_support qw /luhn/;
 
-use vars qw /$VERSION/;
-
-($VERSION) = q $Revision: 2.100 $ =~ /[\d.]+/g;
-
 my @cards = (
     # Name           Prefix                    Length           mod 10
     [Mastercard   =>   '5[1-5]',                16,                1],
@@ -60,7 +56,7 @@ Regexp::Common::CC -- provide patterns for credit card numbers.
     use Regexp::Common qw /CC/;
 
     while (<>) {
-        /^$RE{zip}{Visa}$/   and  print "Visa card number\n";
+        /^$RE{CC}{Mastercard}$/   and  print "Mastercard card number\n";
     }
 
 =head1 DESCRIPTION
@@ -71,12 +67,9 @@ of the works of this interface.
 Do not use this module directly, but load it via I<Regexp::Common>.
 
 This module offers patterns for credit card numbers of several major
-credit card types.
+credit card types. Currently, the supported cards are: I<Mastercard>,
+I<Amex>, I<Diners Club>, and I<Discover>.
 
-
-=head1 HISTORY
-
- $Log: $
 
 =head1 SEE ALSO
 
@@ -113,7 +106,7 @@ Bound to be plenty. Send them in to S<I<regexp-common@abigail.be>>.
 
 =head1 COPYRIGHT
 
-This software is Copyright (c) 2001 - 2008, Damian Conway and Abigail.
+This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 
 This module is free software, and maybe used under any of the following
 licenses:

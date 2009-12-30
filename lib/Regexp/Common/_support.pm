@@ -1,13 +1,7 @@
-# $Id: _support.pm,v 2.103 2008/05/23 21:30:09 abigail Exp $
-
 package Regexp::Common::_support;
 
 use strict;
 local $^W = 1;
-
-use vars qw /$VERSION/;
-($VERSION) = q $Revision: 2.103 $ =~ /[\d.]+/g;
-
 
 #
 # Returns true/false, depending whether the given the argument
@@ -75,25 +69,6 @@ This subroutine returns true if its argument passes the luhn checksum test.
 
 L<http://www.webopedia.com/TERM/L/Luhn_formula.html>.
 
-=head1 HISTORY
-
- $Log: _support.pm,v $
- Revision 2.103  2008/05/23 21:30:09  abigail
- Changed email address
-
- Revision 2.102  2008/05/23 21:28:01  abigail
- Changed license
-
- Revision 2.101  2004/12/18 11:28:25  abigail
- POD nit (Mike Castle)
-
- Revision 2.100  2004/07/01 14:47:00  abigail
- Force version
-
- Revision 2.1  2004/07/01 14:46:35  abigail
- Initial checkin
-
-
 =head1 AUTHOR
 
 Abigail S<(I<regexp-common@abigail.be>)>.
@@ -104,7 +79,7 @@ Bound to be plenty.
 
 =head1 COPYRIGHT
 
-This software is Copyright (c) 2001 - 2008, Damian Conway and Abigail.
+This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 
 This module is free software, and maybe used under any of the following
 licenses:
