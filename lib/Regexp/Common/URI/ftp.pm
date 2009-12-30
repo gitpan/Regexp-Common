@@ -1,12 +1,12 @@
 package Regexp::Common::URI::ftp;
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common               qw /pattern clean no_defaults/;
 use Regexp::Common::URI          qw /register_uri/;
 use Regexp::Common::URI::RFC2396 qw /$host $port $ftp_segments $userinfo
                                      $userinfo_no_colon/;
+
+use strict;
+use warnings;
 
 
 my $ftp_uri = "(?k:(?k:ftp)://(?:(?k:$userinfo)(?k:)\@)?(?k:$host)" .
@@ -188,7 +188,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

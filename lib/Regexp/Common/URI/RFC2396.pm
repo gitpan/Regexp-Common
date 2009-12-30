@@ -1,9 +1,9 @@
 package Regexp::Common::URI::RFC2396;
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common qw /pattern clean no_defaults/;
+
+use strict;
+use warnings;
 
 use vars qw /@EXPORT @EXPORT_OK %EXPORT_TAGS @ISA/;
 
@@ -134,7 +134,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

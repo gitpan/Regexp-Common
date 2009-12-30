@@ -1,10 +1,10 @@
 package Regexp::Common::CC;
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common qw /pattern clean no_defaults/;
 use Regexp::Common::_support qw /luhn/;
+
+use strict;
+use warnings;
 
 my @cards = (
     # Name           Prefix                    Length           mod 10
@@ -104,7 +104,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty. Send them in to S<I<regexp-common@abigail.be>>.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

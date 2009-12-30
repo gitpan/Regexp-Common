@@ -1,7 +1,9 @@
 package Regexp::Common::URI;
 
+use Regexp::Common qw /pattern clean no_defaults/;
+
 use strict;
-local $^W = 1;
+use warnings;
 
 use Exporter ();
 use vars qw /@EXPORT_OK @ISA/;
@@ -10,6 +12,9 @@ use vars qw /@EXPORT_OK @ISA/;
 @EXPORT_OK = qw /register_uri/;
 
 use Regexp::Common qw /pattern clean no_defaults/;
+
+use strict;
+use warnings;
 
 # Use 'require' here, not 'use', so we delay running them after we are compiled.
 # We also do it using an 'eval'; this saves us from have repeated similar
@@ -124,7 +129,7 @@ Bound to be plenty.
 For a start, there are many common regexes missing.
 Send them in to I<regexp-common@abigail.be>.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

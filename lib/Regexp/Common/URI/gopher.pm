@@ -1,12 +1,12 @@
 package Regexp::Common::URI::gopher;
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common               qw /pattern clean no_defaults/;
 use Regexp::Common::URI          qw /register_uri/;
 use Regexp::Common::URI::RFC1738 qw /$host $port $uchars/;
 use Regexp::Common::URI::RFC1808 qw /$pchars $pchar_range/;
+
+use strict;
+use warnings;
 
 
 my $pchars_notab      = "(?:(?:[$pchar_range]+|" . 
@@ -160,7 +160,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

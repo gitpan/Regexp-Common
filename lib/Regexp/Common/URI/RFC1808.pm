@@ -1,7 +1,17 @@
 package Regexp::Common::URI::RFC1808;
 
+BEGIN {
+    # This makes sure 'use warnings' doesn't bomb out on 5.005_*;
+    # warnings won't be enabled on those old versions though.
+    if ($] < 5.006 && !exists $INC {"warnings.pm"}) {
+        $INC {"warnings.pm"} = 1;
+        no strict 'refs';
+        *{"warnings::unimport"} = sub {0};
+    }
+}
+
 use strict;
-local $^W = 1;
+use warnings;
 
 use vars qw /@EXPORT @EXPORT_OK %EXPORT_TAGS @ISA/;
 
@@ -127,7 +137,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

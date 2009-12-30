@@ -1,12 +1,12 @@
 package Regexp::Common::URI::news;
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common               qw /pattern clean no_defaults/;
 use Regexp::Common::URI          qw /register_uri/;
 use Regexp::Common::URI::RFC1738 qw /$grouppart $group $article
                                      $host $port $digits/;
+
+use strict;
+use warnings;
 
 
 my $news_scheme = 'news';
@@ -145,7 +145,7 @@ This package is maintained by Abigail S<(I<regexp-common@abigail.be>)>.
 
 Bound to be plenty.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

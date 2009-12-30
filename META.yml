@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Regexp-Common
-version:            2009123001
+version:            2009123002
 abstract:           Provide commonly requested regular expressions
 author:
     - Abigail <regexp-common@abigail.be>

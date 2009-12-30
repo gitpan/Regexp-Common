@@ -1,16 +1,15 @@
 package Regexp::Common::balanced; {
 
-use strict;
-local $^W = 1;
-
 use Regexp::Common qw /pattern clean no_defaults/;
+
+use strict;
+use warnings;
 
 my %closer = ( '{'=>'}', '('=>')', '['=>']', '<'=>'>' );
 my $count = -1;
 my %cache;
 
 sub nested {
-    local $^W = 1;
     my ($start, $finish) = @_;
 
     return $Regexp::Common::balanced [$cache {$start} {$finish}]
@@ -177,7 +176,7 @@ Bound to be plenty.
 For a start, there are many common regexes missing.
 Send them in to I<regexp-common@abigail.be>.
 
-=head1 COPYRIGHT
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 

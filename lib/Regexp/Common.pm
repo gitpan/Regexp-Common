@@ -18,7 +18,7 @@ BEGIN {
 use warnings;
 use vars qw /$VERSION %RE %sub_interface $AUTOLOAD/;
 
-$VERSION = '2009123001';
+$VERSION = '2009123002';
 
 
 sub _croak {
@@ -845,7 +845,11 @@ Bound to be plenty.
 For a start, there are many common regexes missing.
 Send them in to I<regexp-common@abigail.be>.
 
-=head1 COPYRIGHT
+There are some POD issues when installing this module using a pre-5.6.0 perl;
+some manual pages may not install, or may not install correctly using a perl
+that is that old. You might consider upgrading your perl.
+
+=head1 LICENSE and COPYRIGHT
 
 This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
 
