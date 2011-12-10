@@ -18,7 +18,7 @@ BEGIN {
 use warnings;
 use vars qw /$VERSION %RE %sub_interface $AUTOLOAD/;
 
-$VERSION = '2011041701';
+$VERSION = '2011121001';
 
 
 sub _croak {
@@ -272,6 +272,9 @@ sub _clone_with {
     bless { %$self, args=>$args, flags=>$flags }, ref $self;
 }
 
+1;
+
+__END__
 
 =pod
 
@@ -287,7 +290,7 @@ Regexp::Common - Provide commonly requested regular expressions
 
  while (<>) {
      /$RE{num}{real}/               and print q{a number};
-     /$RE{quoted}                   and print q{a ['"`] quoted string};
+     /$RE{quoted}/                  and print q{a ['"`] quoted string};
      /$RE{delimited}{-delim=>'/'}/  and print q{a /.../ sequence};
      /$RE{balanced}{-parens=>'()'}/ and print q{balanced parentheses};
      /$RE{profanity}/               and print q{a #*@%-ing word};
@@ -849,9 +852,25 @@ There are some POD issues when installing this module using a pre-5.6.0 perl;
 some manual pages may not install, or may not install correctly using a perl
 that is that old. You might consider upgrading your perl.
 
+=head1 NOT A BUG
+
+=over 4
+
+=item *
+
+The various patterns are not anchored. That is, a pattern like 
+C<< $RE {num} {int} >> will match against "abc4def", because a 
+substring of the subject matches. This is by design, and not a
+bug. If you want the pattern to be anchored, use something like:
+
+ my $integer = $RE {num} {int};
+ $subj =~ /^$integer$/ and print "Matches!\n";
+
+=back
+
 =head1 LICENSE and COPYRIGHT
 
-This software is Copyright (c) 2001 - 2009, Damian Conway and Abigail.
+This software is Copyright (c) 2001 - 2011, Damian Conway and Abigail.
 
 This module is free software, and maybe used under any of the following
 licenses:
