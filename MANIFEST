@@ -101,4 +101,5 @@ t/zip/us.t
 t/zip/zip.t
 t/zzz_50_pod.t
 t/zzz_60_pod_coverage.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
