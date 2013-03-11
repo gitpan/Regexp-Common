@@ -28,6 +28,6 @@ requires:
   vars: 0
 resources:
   repository: git://github.com/Abigail/Regexp--Common.git
-version: 2013030901
+version: 2013031101
 x_test_requires:
   strict: 0
